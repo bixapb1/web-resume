@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="ua">
 
 <head>
 	<meta charset="utf-8">
@@ -35,7 +35,6 @@
 			top: 20px;
 			right: 20px;
 			background: #fff;
-			border-radius: 30px;
 			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 			overflow: hidden;
 			display: flex
@@ -44,15 +43,26 @@
 		.lang-switch button {
 			border: none;
 			padding: 10px 18px;
-			background: transparent;
-			font-weight: 600;
+			font-weight: 700;
 			cursor: pointer;
-			transition: 0.3s
+			transition: 0.3s;
+			opacity: 0.55;
+			filter: grayscale(35%)
+		}
+
+		#btn-en {
+			background: #0057B7;
+			color: #fff
+		}
+
+		#btn-ua {
+			background: #FFD700;
+			color: #1a1a1a
 		}
 
 		.lang-switch button.active {
-			background: #6c63ff;
-			color: #fff
+			opacity: 1;
+			filter: none
 		}
 
 		h1 {
@@ -119,11 +129,10 @@
 			position: fixed;
 			left: 20px;
 			top: 20px;
-			background: #6c63ff;
+			background: #0057B7;
 			color: white;
 			border: none;
 			padding: 12px 20px;
-			border-radius: 8px;
 			font-weight: 600;
 			cursor: pointer
 		}
@@ -151,11 +160,14 @@
 
 <body>
 
-	<button class="pdf-btn" onclick="downloadPDF()">Download PDF</button>
+	<button class="pdf-btn" onclick="downloadPDF()">
+		<span data-lang="en">Download PDF</span>
+		<span data-lang="ua" style="display:none">Завантажити PDF</span>
+	</button>
 
 	<div class="lang-switch">
-		<button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-		<button id="btn-ua" onclick="setLang('ua')">UA</button>
+		<button id="btn-ua" class="active" onclick="setLang('ua')">UA</button>
+		<button id="btn-en" onclick="setLang('en')">EN</button>
 	</div>
 
 	<div class="resume-wrapper" id="resume">
@@ -275,6 +287,11 @@
 			<ul class="contact-list"
 				style="list-style:none; padding:18px; margin-top:15px; border:1px solid #ececf4; border-radius:10px;">
 				<li style="margin-bottom:10px">
+					<b><span data-lang="en">Phone:</span><span data-lang="ua" style="display:none">Телефон:</span></b>
+					<a href="tel:+380932721968">+380 93 272 19 68 <i class="fa fa-arrow-right"
+							aria-hidden="true"></i></a>
+				</li>
+				<li style="margin-bottom:10px">
 					<b>Email:</b>
 					<a href="mailto:bixapb@gmail.com">bixapb@gmail.com <i class="fa fa-arrow-right"
 							aria-hidden="true"></i></a>
@@ -324,7 +341,7 @@
 		}
 
 		window.onload = () => {
-			const saved = localStorage.getItem('lang') || 'en'
+			const saved = localStorage.getItem('lang') || 'ua'
 			setLang(saved)
 		}
 	</script>
