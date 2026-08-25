@@ -1,0 +1,336 @@
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Resume</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+		rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		body {
+			font-family: Poppins, sans-serif;
+			background: #f5f6fa
+		}
+
+		.resume-wrapper {
+			max-width: 900px;
+			margin: 40px auto;
+			background: #fff;
+			padding: 45px;
+			border-radius: 14px;
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08)
+		}
+
+		.section-block {
+			border-top: 1px solid #e9e9f2;
+			padding-top: 25px;
+			margin-top: 25px
+		}
+
+		.lang-switch {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			background: #fff;
+			border-radius: 30px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			display: flex
+		}
+
+		.lang-switch button {
+			border: none;
+			padding: 10px 18px;
+			background: transparent;
+			font-weight: 600;
+			cursor: pointer;
+			transition: 0.3s
+		}
+
+		.lang-switch button.active {
+			background: #6c63ff;
+			color: #fff
+		}
+
+		h1 {
+			font-weight: 700;
+			margin-bottom: 10px
+		}
+
+		h2 {
+			font-size: 22px;
+			color: #6c63ff;
+			margin-bottom: 15px
+		}
+
+		h4 {
+			margin-bottom: 4px;
+			font-weight: 600
+		}
+
+		h5 {
+			color: #777;
+			font-size: 14px;
+			margin-bottom: 10px
+		}
+
+		ul {
+			padding-left: 20px
+		}
+
+		ul li {
+			margin-bottom: 6px
+		}
+
+		.contact-list li {
+			margin-bottom: 8px
+		}
+
+		.contact-list a {
+			text-decoration: none;
+			color: #444;
+			font-weight: 500
+		}
+
+		.contact-list a:hover {
+			color: #6c63ff
+		}
+
+		.social-icons {
+			margin-top: 10px;
+			display: flex;
+			gap: 12px
+		}
+
+		.social-icons a {
+			font-size: 20px;
+			color: #6c63ff;
+			transition: 0.3s
+		}
+
+		.social-icons a:hover {
+			transform: scale(1.2)
+		}
+
+		.pdf-btn {
+			position: fixed;
+			left: 20px;
+			top: 20px;
+			background: #6c63ff;
+			color: white;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 8px;
+			font-weight: 600;
+			cursor: pointer
+		}
+
+		@media print {
+
+			.lang-switch,
+			.pdf-btn {
+				display: none
+			}
+
+			body {
+				background: white
+			}
+
+			.resume-wrapper {
+				box-shadow: none;
+				margin: 0
+			}
+		}
+	</style>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+
+	<button class="pdf-btn" onclick="downloadPDF()">Download PDF</button>
+
+	<div class="lang-switch">
+		<button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+		<button id="btn-ua" onclick="setLang('ua')">UA</button>
+	</div>
+
+	<div class="resume-wrapper" id="resume">
+
+		<h1>Maksym Vikharev</h1>
+
+
+		<p style="font-size:18px;font-weight:500;margin-top:10px">
+			<span data-lang="en">Front-End Developer</span>
+			<span data-lang="ua" style="display:none">Front-End розробник</span>
+		</p>
+
+		<h2>
+			<span data-lang="en">Professional Experience</span>
+			<span data-lang="ua" style="display:none">Досвід роботи</span>
+		</h2>
+
+		<h4>NDA</h4>
+		<h5>2023 - 2026</h5>
+		<ul>
+			<li>
+				<span data-lang="en">Full-stack website development on plain HTML / CSS / JavaScript, as well as
+					Next.js and Node.js</span>
+				<span data-lang="ua" style="display:none">Full-stack розробка сайтів на чистому HTML / CSS / JavaScript,
+					а також Next.js та Node.js</span>
+			</li>
+			<li>
+				<span data-lang="en">Building landing pages and websites from scratch: layout, logic and deployment
+					to hosting</span>
+				<span data-lang="ua" style="display:none">Створення лендингів та сайтів з нуля: верстка, логіка та
+					розгортання на хостинг</span>
+			</li>
+			<li>
+				<span data-lang="en">Server setup and administration with Nginx and Apache, full cycle from
+					development to going live</span>
+				<span data-lang="ua" style="display:none">Налаштування та адміністрування серверів на Nginx та Apache,
+					повний цикл від розробки до запуску</span>
+			</li>
+			<li>
+				<span data-lang="en">Using Claude Code to speed up development and automate routine tasks</span>
+				<span data-lang="ua" style="display:none">Використання Claude Code для прискорення розробки та
+					автоматизації рутинних задач</span>
+			</li>
+			<li>
+				<span data-lang="en">Work with trackers (Keitaro, Binom), postbacks, domains, servers and
+					analytics</span>
+				<span data-lang="ua" style="display:none">Робота з трекерами (Keitaro, Binom), постбеки, домени,
+					сервери та аналітика</span>
+			</li>
+		</ul>
+
+		<h4>ZlodeiTeam</h4>
+		<h5>2022 - 2023</h5>
+		<ul>
+			<li>HTML / CSS / JavaScript</li>
+			<li>
+				<span data-lang="en">Developed websites on plain JavaScript, landing page layout and small web
+					apps</span>
+				<span data-lang="ua" style="display:none">Розробка сайтів на чистому JavaScript, верстка лендингів та
+					невеликих веб-застосунків</span>
+			</li>
+			<li>
+				<span data-lang="en">API and application integrations</span>
+				<span data-lang="ua" style="display:none">Інтеграція API та застосунків</span>
+			</li>
+			<li>
+				<span data-lang="en">Trackers configuration: Keitaro, Binom</span>
+				<span data-lang="ua" style="display:none">Налаштування трекерів Keitaro та Binom</span>
+			</li>
+			<li>
+				<span data-lang="en">Work with anti-detect browsers</span>
+				<span data-lang="ua" style="display:none">Робота з антидетект браузерами</span>
+			</li>
+			<li>
+				<span data-lang="en">Domains and hosting management</span>
+				<span data-lang="ua" style="display:none">Робота з доменами та хостингами</span>
+			</li>
+		</ul>
+
+		<h4>Rabota.ua</h4>
+		<h5>2022</h5>
+		<p>
+			<span data-lang="en">Trainee Frontend Developer</span>
+			<span data-lang="ua" style="display:none">Стажер Frontend розробник</span>
+		</p>
+		<ul>
+			<li>Angular</li>
+			<li>TypeScript</li>
+			<li>Rx.js</li>
+		</ul>
+
+		<h4>McQueen Marketing Agency</h4>
+		<h5>2021</h5>
+		<ul>
+			<li>
+				<span data-lang="en">Landing pages development</span>
+				<span data-lang="ua" style="display:none">Розробка лендинг сторінок</span>
+			</li>
+			<li>
+				<span data-lang="en">Domains and hosting management</span>
+				<span data-lang="ua" style="display:none">Робота з доменами та хостингами</span>
+			</li>
+			<li>
+				<span data-lang="en">Postback configuration, Facebook Pixel, website analytics</span>
+				<span data-lang="ua" style="display:none">Налаштування постбеків, Facebook Pixel та аналітики
+					сайтів</span>
+			</li>
+			<li>Binom / Keitaro</li>
+		</ul>
+
+		<div class="section-block">
+			<h2>
+				<span data-lang="en">Contact</span>
+				<span data-lang="ua" style="display:none">Контакти</span>
+			</h2>
+
+			<ul class="contact-list"
+				style="list-style:none; padding:18px; margin-top:15px; border:1px solid #ececf4; border-radius:10px;">
+				<li style="margin-bottom:10px">
+					<b>Email:</b>
+					<a href="mailto:bixapb@gmail.com">bixapb@gmail.com <i class="fa fa-arrow-right"
+							aria-hidden="true"></i></a>
+				</li>
+				<li style="margin-bottom:10px">
+					<b>Telegram:</b>
+					<a href="https://t.me/Bixapb" target="_blank">Telegram <i class="fa fa-arrow-right"
+							aria-hidden="true"></i></a>
+				</li>
+				<li style="margin-bottom:10px">
+					<b>LinkedIn:</b>
+					<a href="https://www.linkedin.com/in/%D0%BC%D0%B0%D0%BA%D1%81%D0%B8%D0%BC-%D0%B2%D0%B8%D1%85%D0%B0%D1%80%D0%B5%D0%B2-133178221/"
+						target="_blank">LinkedIn <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+				</li>
+				<li style="margin-bottom:10px">
+					<b>Instagram:</b>
+					<a href="https://instagram.com/m_vihar?igshid=YmMyMTA2M2Y=" target="_blank">Instagram <i
+							class="fa fa-arrow-right" aria-hidden="true"></i></a>
+				</li>
+				<li>
+					<b>Facebook:</b>
+					<a href="https://www.facebook.com/bixapb/" target="_blank">Facebook <i class="fa fa-arrow-right"
+							aria-hidden="true"></i></a>
+				</li>
+			</ul>
+
+
+		</div>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+	<script>
+		function setLang(lang) {
+			localStorage.setItem('lang', lang)
+			document.querySelectorAll('[data-lang]').forEach(el => {
+				el.style.display = el.getAttribute('data-lang') === lang ? 'inline' : 'none'
+			})
+			document.getElementById('btn-en').classList.toggle('active', lang === 'en')
+			document.getElementById('btn-ua').classList.toggle('active', lang === 'ua')
+		}
+
+		function downloadPDF() {
+			const element = document.getElementById('resume')
+			html2pdf().from(element).save('Maksym_Vikharev_Resume.pdf')
+		}
+
+		window.onload = () => {
+			const saved = localStorage.getItem('lang') || 'en'
+			setLang(saved)
+		}
+	</script>
+
+
+
+</body>
+
+</html>
