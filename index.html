@@ -60,6 +60,11 @@
 			color: #1a1a1a
 		}
 
+		#btn-nl {
+			background: #AE1C28;
+			color: #fff
+		}
+
 		.lang-switch button.active {
 			opacity: 1;
 			filter: none
@@ -163,11 +168,13 @@
 	<button class="pdf-btn" onclick="downloadPDF()">
 		<span data-lang="en">Download PDF</span>
 		<span data-lang="ua" style="display:none">Завантажити PDF</span>
+		<span data-lang="nl" style="display:none">PDF downloaden</span>
 	</button>
 
 	<div class="lang-switch">
 		<button id="btn-ua" class="active" onclick="setLang('ua')">UA</button>
 		<button id="btn-en" onclick="setLang('en')">EN</button>
+		<button id="btn-nl" onclick="setLang('nl')">NL</button>
 	</div>
 
 	<div class="resume-wrapper" id="resume">
@@ -178,11 +185,13 @@
 		<p style="font-size:18px;font-weight:500;margin-top:10px">
 			<span data-lang="en">Front-End Developer</span>
 			<span data-lang="ua" style="display:none">Front-End розробник</span>
+			<span data-lang="nl" style="display:none">Front-End ontwikkelaar</span>
 		</p>
 
 		<h2>
 			<span data-lang="en">Professional Experience</span>
 			<span data-lang="ua" style="display:none">Досвід роботи</span>
+			<span data-lang="nl" style="display:none">Werkervaring</span>
 		</h2>
 
 		<h4>NDA</h4>
@@ -190,32 +199,42 @@
 		<ul>
 			<li>
 				<span data-lang="en">Full-stack website development on plain HTML / CSS / JavaScript, as well as
-					Next.js and Node.js</span>
+					Node.js (Express.js)</span>
 				<span data-lang="ua" style="display:none">Full-stack розробка сайтів на чистому HTML / CSS / JavaScript,
-					а також Next.js та Node.js</span>
+					а також Node.js (Express.js)</span>
+				<span data-lang="nl" style="display:none">Full-stack websiteontwikkeling in pure HTML / CSS / JavaScript,
+					evenals Node.js (Express.js)</span>
 			</li>
 			<li>
 				<span data-lang="en">Building landing pages and websites from scratch: layout, logic and deployment
 					to hosting</span>
 				<span data-lang="ua" style="display:none">Створення лендингів та сайтів з нуля: верстка, логіка та
 					розгортання на хостинг</span>
+				<span data-lang="nl" style="display:none">Landingspagina's en websites vanaf nul bouwen: opmaak, logica
+					en deployment naar hosting</span>
 			</li>
 			<li>
 				<span data-lang="en">Server setup and administration with Nginx and Apache, full cycle from
 					development to going live</span>
 				<span data-lang="ua" style="display:none">Налаштування та адміністрування серверів на Nginx та Apache,
 					повний цикл від розробки до запуску</span>
+				<span data-lang="nl" style="display:none">Serverconfiguratie en -beheer met Nginx en Apache, volledige
+					cyclus van ontwikkeling tot livegang</span>
 			</li>
 			<li>
 				<span data-lang="en">Using Claude Code to speed up development and automate routine tasks</span>
 				<span data-lang="ua" style="display:none">Використання Claude Code для прискорення розробки та
 					автоматизації рутинних задач</span>
+				<span data-lang="nl" style="display:none">Claude Code gebruiken om ontwikkeling te versnellen en
+					routinetaken te automatiseren</span>
 			</li>
 			<li>
 				<span data-lang="en">Work with trackers (Keitaro, Binom), postbacks, domains, servers and
 					analytics</span>
 				<span data-lang="ua" style="display:none">Робота з трекерами (Keitaro, Binom), постбеки, домени,
 					сервери та аналітика</span>
+				<span data-lang="nl" style="display:none">Werken met trackers (Keitaro, Binom), postbacks, domeinen,
+					servers en analytics</span>
 			</li>
 		</ul>
 
@@ -228,22 +247,28 @@
 					apps</span>
 				<span data-lang="ua" style="display:none">Розробка сайтів на чистому JavaScript, верстка лендингів та
 					невеликих веб-застосунків</span>
+				<span data-lang="nl" style="display:none">Websites ontwikkeld in pure JavaScript, opmaak van
+					landingspagina's en kleine webapps</span>
 			</li>
 			<li>
 				<span data-lang="en">API and application integrations</span>
 				<span data-lang="ua" style="display:none">Інтеграція API та застосунків</span>
+				<span data-lang="nl" style="display:none">API- en applicatie-integraties</span>
 			</li>
 			<li>
 				<span data-lang="en">Trackers configuration: Keitaro, Binom</span>
 				<span data-lang="ua" style="display:none">Налаштування трекерів Keitaro та Binom</span>
+				<span data-lang="nl" style="display:none">Trackers configureren: Keitaro, Binom</span>
 			</li>
 			<li>
 				<span data-lang="en">Work with anti-detect browsers</span>
 				<span data-lang="ua" style="display:none">Робота з антидетект браузерами</span>
+				<span data-lang="nl" style="display:none">Werken met anti-detect browsers</span>
 			</li>
 			<li>
 				<span data-lang="en">Domains and hosting management</span>
 				<span data-lang="ua" style="display:none">Робота з доменами та хостингами</span>
+				<span data-lang="nl" style="display:none">Beheer van domeinen en hosting</span>
 			</li>
 		</ul>
 
@@ -252,6 +277,7 @@
 		<p>
 			<span data-lang="en">Trainee Frontend Developer</span>
 			<span data-lang="ua" style="display:none">Стажер Frontend розробник</span>
+			<span data-lang="nl" style="display:none">Stagiair Frontend-ontwikkelaar</span>
 		</p>
 		<ul>
 			<li>Angular</li>
@@ -264,16 +290,19 @@
 		<ul>
 			<li>
 				<span data-lang="en">Landing pages development</span>
-				<span data-lang="ua" style="display:none">Розробка лендинг сторінок</span>
+				<span data-lang="ua" style="display:none">Розробка лендинг-сторінок</span>
+				<span data-lang="nl" style="display:none">Ontwikkeling van landingspagina's</span>
 			</li>
 			<li>
 				<span data-lang="en">Domains and hosting management</span>
 				<span data-lang="ua" style="display:none">Робота з доменами та хостингами</span>
+				<span data-lang="nl" style="display:none">Beheer van domeinen en hosting</span>
 			</li>
 			<li>
 				<span data-lang="en">Postback configuration, Facebook Pixel, website analytics</span>
 				<span data-lang="ua" style="display:none">Налаштування постбеків, Facebook Pixel та аналітики
 					сайтів</span>
+				<span data-lang="nl" style="display:none">Postback-configuratie, Facebook Pixel, website-analytics</span>
 			</li>
 			<li>Binom / Keitaro</li>
 		</ul>
@@ -282,12 +311,13 @@
 			<h2>
 				<span data-lang="en">Contact</span>
 				<span data-lang="ua" style="display:none">Контакти</span>
+				<span data-lang="nl" style="display:none">Contact</span>
 			</h2>
 
 			<ul class="contact-list"
 				style="list-style:none; padding:18px; margin-top:15px; border:1px solid #ececf4; border-radius:10px;">
 				<li style="margin-bottom:10px">
-					<b><span data-lang="en">Phone:</span><span data-lang="ua" style="display:none">Телефон:</span></b>
+					<b><span data-lang="en">Phone:</span><span data-lang="ua" style="display:none">Телефон:</span><span data-lang="nl" style="display:none">Telefoon:</span></b>
 					<a href="tel:+380932721968">+380 93 272 19 68 <i class="fa fa-arrow-right"
 							aria-hidden="true"></i></a>
 				</li>
@@ -331,8 +361,9 @@
 			document.querySelectorAll('[data-lang]').forEach(el => {
 				el.style.display = el.getAttribute('data-lang') === lang ? 'inline' : 'none'
 			})
-			document.getElementById('btn-en').classList.toggle('active', lang === 'en')
-			document.getElementById('btn-ua').classList.toggle('active', lang === 'ua')
+			document.querySelectorAll('.lang-switch button').forEach(btn => {
+				btn.classList.toggle('active', btn.id === 'btn-' + lang)
+			})
 		}
 
 		function downloadPDF() {
