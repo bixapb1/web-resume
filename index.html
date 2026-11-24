@@ -1,4 +1,4 @@
-<html lang="ua">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -172,8 +172,8 @@
 	</button>
 
 	<div class="lang-switch">
-		<button id="btn-ua" class="active" onclick="setLang('ua')">UA</button>
-		<button id="btn-en" onclick="setLang('en')">EN</button>
+		<button id="btn-ua" onclick="setLang('ua')">UA</button>
+		<button id="btn-en" class="active" onclick="setLang('en')">EN</button>
 		<button id="btn-nl" onclick="setLang('nl')">NL</button>
 	</div>
 
@@ -372,7 +372,7 @@
 		}
 
 		window.onload = () => {
-			const saved = localStorage.getItem('lang') || 'ua'
+			const saved = localStorage.getItem('lang') || 'en'
 			setLang(saved)
 		}
 	</script>
